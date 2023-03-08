@@ -9,16 +9,21 @@ h1{
 body{
     background-color: azure;
 }
-.logandsignparent {
+.parent {
   border: 5px;
   padding: 5px 5px;
+  margin: 1rem;
+  
 }
-.logandsign a{
-  position:fixed; 
+.child a{
+  position: sticky; 
+  float: right;
   display: inline-block;
+  vertical-align:baseline;
   top: 0;
   right: 0;
   text-align: center;
+  padding: 1rem 1rem;
   color: darkslategrey;
   font-size: 20px;
   font-family:"Monaco", monospace;
