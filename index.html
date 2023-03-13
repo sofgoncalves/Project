@@ -7,7 +7,7 @@
     <title>Project</title>
     <link  rel="stylesheet" href="./style.css">
 </head>
-<body onload="alert('Are you over 18?')">
+<body onload="checkVerification();">
 
 
     <div class="parent">
@@ -22,7 +22,33 @@
        
     <h1> Beer </h1>
 
-     
+    <!--<script>
+        function openHome() {
+          document.getElementById("ageCheck").innerHTML=("");
+        }
+        </script>
+
+    <div>
+        <form id="ageCheck">
+        <input type="button" value="Yes, i'm over 18" onclick="openHome()">
+      </form>
+    </div>
+-->
+
+
+    <script>
+        
+
+        function checkVerification() {
+        if (localStorage.over18) {
+            console.log("Age verified");
+        } else {
+            window.open("./fakesplash.html", "_self");
+            localStorage.over18 = true;
+        }
+        
+    }
+    </script> 
     
         
     
@@ -33,6 +59,10 @@
         <a href="#Quiz">Quiz</a>
         <input type="text" placeholder="Search..">
     </div>
+
+<main>
+
+</main>
 
 </body>
 </html>

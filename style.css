@@ -5,6 +5,14 @@ h1{
     text-align: center;
     text-shadow: 4px 4px rgb(255, 255, 255);
   }
+h2{
+  color: rgb(119, 50, 110);
+    font-family:"Monaco", monospace;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 4px 4px rgb(255, 255, 255);
+
+}
 
 body{
     background-color: azure;
@@ -37,7 +45,7 @@ body{
     border-radius: 30px;
   }
   
-  /* Style the links inside the navigation bar */
+
   .topnav a {
     float: left;
     display: block;
@@ -49,19 +57,19 @@ body{
     font-family: "Monaco", monospace;
   }
   
-  /* Change the color of links on hover */
+
   .topnav a:hover {
     background-color: rgba(47, 79, 79, 0.404);
     color: black;
   }
   
-  /* Style the "active" element to highlight the current page */
+  
   .topnav a.active {
     background-color: darkslategrey;
     color: white;
   }
   
-  /* Style the search box inside the navigation bar */
+ 
   .topnav input[type=text] {
     float: right;
     padding: 6px;
@@ -72,7 +80,7 @@ body{
     border-radius: 15px;
   }
   
-  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+  
   @media screen and (max-width: 600px) {
     .topnav a, .topnav input[type=text] {
       float: none;
@@ -87,12 +95,24 @@ body{
       
     }
   }
-  form {
+  form{
     margin: 0 auto;
     width: 500px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
+
+  }
+  .ageBtn{
+    margin: 0 auto;
+    width: 500px;
+    padding: 20px;
+
+  }
+  input[type="button"]{
+    color: rgb(119, 50, 110);
+    font-family:"Monaco", monospace;
+    text-align: center;
 
   }
   label {
