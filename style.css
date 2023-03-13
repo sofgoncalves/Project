@@ -107,6 +107,8 @@ body{
     margin: 0 auto;
     width: 500px;
     padding: 20px;
+    text-align: center;
+    border: none !important;
 
   }
   input[type="button"]{
