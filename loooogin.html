@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        let customers = [{ "cust_ID": "1", "custFirstName": "Andrea", "custLastName": "Anderson", "Adress": "22 Mayfield", "Postcode": "WV981JT", "Email": "andrea.anderson13@gmail.com", "Password": "doubleA123" },
+            { "cust_ID": "2", "custFirstName": "Tom", "custLastName": "Flowers", "Adress": "2 Westbrook", "Postcode": "L357AB", "Email": "flowerytommytom@outlook.com", "Password": "flowers123" },
+            { "cust_ID": "3", "custFirstName": "Stevey", "custLastName": "boi", "Adress": "47 Livington", "Postcode": "RG456AN", "Email": "itsyaboisteve33@hotmail.com", "Password": "yaboi123" },
+            { "cust_ID": "4", "custFirstName": "Connor", "custLastName": "Mcnealy", "Adress": "13 Ashdale", "Postcode": "TR50TP", "Email": "mcknees21@gmail.com", "Password": "knees123" },
+            { "cust_ID": "5", "custFirstName": "Amy", "custLastName": "Yu", "Adress": "5 Obama", "Postcode": "DE1 3LG", "Email": "sevenatenine789@outlook.com", "Password": "ilovemycat123" }]
+    </script>
+
+    <script> function showCust() {
+            //const obj = JSON.parse(text);
+            document.getElementById("test").innerHTML = customers[3].Adress;
+        }
+        function jsonLoop() {
+                for (let i = 0; i < customers.length; i++) {
+                    let obj = customers[i];
+
+                    console.log(cust_ID);
+                };
+            }
+    </script>
+
+    
+</head>
+
+<body onload="showCust();">
+    <div id="test">
+
+    </div>
+
+</body>
+
+<!--[{"cust_ID":"1","custFirstName":"Andrea","custLastName":"Anderson","Adress":"22 Mayfield","Postcode":"WV98
+1JT","Email":"andrea.anderson13@gmail.com","Password":"doubleA123"},{"cust_ID":"2","custFirstName":"Tom","custLastName":"Flowers","Adress":"2
+Westbrook","Postcode":"L35
+7AB","Email":"flowerytommytom@outlook.com","Password":"flowers123"},{"cust_ID":"3","custFirstName":"Stevey","custLastName":"boi","Adress":"47
+Livington","Postcode":"RG45
+6AN","Email":"itsyaboisteve33@hotmail.com","Password":"yaboi123"},{"cust_ID":"4","custFirstName":"Connor","custLastName":"Mcnealy","Adress":"13
+Ashdale","Postcode":"TR5
+0TP","Email":"mcknees21@gmail.com","Password":"knees123"},{"cust_ID":"5","custFirstName":"Amy","custLastName":"Yu","Adress":"5
+Obama","Postcode":"DE1 3LG","Email":"sevenatenine789@outlook.com","Password":"ilovemycat123"}]
+-->
