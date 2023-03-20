@@ -1,0 +1,86 @@
+<!--quiz about beer preference that takes in answers from the user and makes them their own unique "beer personality traits".
+    the quiz will ask questions such as "how malty do you like your beer from 1-10, 1 being not very malty and 10 being very malty?",
+    and " Do you prefer for the colour of you beer to be dark and heavy,light and clean, or somewhere in the middle." -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        
+        let answers = {};
+
+        
+        function askQuestion(question, key) {
+            let answer = prompt(question);
+            answers[key] = answer;
+        }
+
+        
+        askQuestion("How malty do you like your beer from 1-10, 1 being not very malty and 10 being very malty?", "maltiness");
+        askQuestion("Do you prefer for the colour of your beer to be dark and heavy, light and clean, or somewhere in the middle?", "color");
+        askQuestion("How hoppy do you like your beer from 1-10, 1 being not very hoppy and 10 being very hoppy?", "hoppiness");
+        askQuestion("Do you prefer a beer with a high or low ABV (alcohol by volume)?", "abv");
+        askQuestion("How important is the aroma of your beer to you from 1-10, 1 being not very important and 10 being very important?", "aroma");
+
+        //definfing the objects
+        let beerTraits = {
+            "maltiness": "",
+            "color": "",
+            "hoppiness": "",
+            "abv": "",
+            "aroma": ""
+        };
+
+        // generation
+        if (answers["maltiness"] >= 8) {
+            beerTraits["maltiess"] = "malty";
+        } else if (answers["maltiness"] >= 5) {
+            beerTraits["maltiness"] = "balanced";
+        } else {
+            beerTraits["maltiness"] = "not very malty";
+        }
+
+        if (answers["color"].toLowerCase() === "dark and heavy") {
+            beerTraits["color"] = "dark";
+        } else if (answers["color"].toLowerCase() === "light and clean") {
+            beerTraits["color"] = "light";
+        } else {
+            beerTraits["color"] = "medium";
+        }
+
+        if (answers["hoppiness"] >= 8) {
+            beerTraits["hoppiness"] = "hoppy";
+        } else if (answers["hoppiness"] >= 5) {
+            beerTraits["hoppiness"] = "balanced";
+        } else {
+            beerTraits["hoppiness"] = "not very hopy";
+        }
+
+        if (answers["abv"].toLowerCase() === "high") {
+            beerTraits["abv"] = "strong";
+        } else {
+            beerTraits["abv"] = "mild";
+        }
+
+        if (answers["aroma"] >= 8) {
+            beerTraits["aroma"] = "aromatic";
+        } else if (answers["aroma"] >= 5) {
+            beerTraits["aroma"] = "subtle";
+        } else {
+            beerTraits["aroma"] = "not very aromatic";
+        }
+
+        
+        alert(`Your beer personality traits are: ${beerTraits["maltiness"]}, ${beerTraits["color"]},
+        ${beerTraits["hoppiness"]}, ${beerTraits["abv"]}, and ${beerTraits["aroma"]}.
+        Thank you so much for taking this test :)`);
+
+
+    </script>
+</head>
