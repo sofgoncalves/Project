@@ -1,9 +1,16 @@
+.topcontainer{
+  position:relative
+}
+.hoppy{
+  
+}
 h1{
     color: rgb(73, 28, 67);
     font-family:"Monaco", monospace;
     font-size: 50px;
     text-align: center;
     text-shadow: 4px 4px rgb(255, 255, 255);
+    
   }
 h2{
   color: rgb(119, 50, 110);
