@@ -23,7 +23,7 @@
 
         
         askQuestion("How malty do you like your beer from 1-10, 1 being not very malty and 10 being very malty?", "maltiness");
-        askQuestion("Do you prefer for the colour of your beer to be dark and heavy, light and clean, or somewhere in the middle?", "color");
+        askQuestion("Do you prefer for the colour of your beer to be dark and heavy, light and clean, or somewhere in the middle?", "colour");
         askQuestion("How hoppy do you like your beer from 1-10, 1 being not very hoppy and 10 being very hoppy?", "hoppiness");
         askQuestion("Do you prefer a beer with a high or low ABV (alcohol by volume)?", "abv");
         askQuestion("How important is the aroma of your beer to you from 1-10, 1 being not very important and 10 being very important?", "aroma");
@@ -31,7 +31,7 @@
         //definfing the objects
         let beerTraits = {
             "maltiness": "",
-            "color": "",
+            "colour": "",
             "hoppiness": "",
             "abv": "",
             "aroma": ""
@@ -46,12 +46,12 @@
             beerTraits["maltiness"] = "not very malty";
         }
 
-        if (answers["color"].toLowerCase() === "dark and heavy") {
-            beerTraits["color"] = "dark";
-        } else if (answers["color"].toLowerCase() === "light and clean") {
-            beerTraits["color"] = "light";
+        if (answers["colour"].toLowerCase() === "dark and heavy") {
+            beerTraits["colour"] = "dark";
+        } else if (answers["colour"].toLowerCase() === "light and clean") {
+            beerTraits["colour"] = "light";
         } else {
-            beerTraits["color"] = "medium";
+            beerTraits["colour"] = "medium";
         }
 
         if (answers["hoppiness"] >= 8) {
@@ -77,9 +77,10 @@
         }
 
         
-        alert(`Your beer prefernce traits are: ${beerTraits["maltiness"]}, ${beerTraits["color"]},
+        alert(`Your beer prefernce traits are: ${beerTraits["maltiness"]}, ${beerTraits["colour"]},
         ${beerTraits["hoppiness"]}, ${beerTraits["abv"]}, and ${beerTraits["aroma"]}.
         Thank you so much for taking this test :)`);
+        window.location.href= "./index.html";
 
 
     </script>

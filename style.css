@@ -1,8 +1,5 @@
-.topcontainer{
-  position:relative
-}
-.hoppy{
-  
+.h1-center{
+
 }
 h1{
     color: rgb(73, 28, 67);
@@ -23,6 +20,14 @@ h2{
 
 body{
     background-color: azure;
+}
+.hopimage img{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  vertical-align: middle;
+  
 }
 .parent {
   border: 5px;
@@ -50,6 +55,7 @@ body{
     overflow: hidden;
     background-color:lightblue;
     border-radius: 30px;
+    margin:auto;
   }
   
 
