@@ -15,13 +15,10 @@
         
         let answers = {};
 
-        
         function askQuestion(question, key) {
             let answer = prompt(question);
             answers[key] = answer;
         }
-
-        
         askQuestion("How malty do you like your beer from 1-10, 1 being not very malty and 10 being very malty?", "maltiness");
         askQuestion("Do you prefer for the colour of your beer to be dark and heavy, light and clean, or somewhere in the middle?", "colour");
         askQuestion("How hoppy do you like your beer from 1-10, 1 being not very hoppy and 10 being very hoppy?", "hoppiness");

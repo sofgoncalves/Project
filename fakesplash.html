@@ -12,6 +12,7 @@
 <head>
   <script>
     function openHome() {
+      //redirects to index and closes itself when called
       window.open("./index.html", "_self");
     }
   </script>
@@ -22,7 +23,8 @@
   <h2> (Must be over 18 to continue.) </h2>
 
   <form class="ageBtn" id="ageCheck">
-    <input type="button" value="Yes, i'm over 18" onclick="openHome()">
+    <input type="button" value="Yes, i'm over 18" onclick="openHome()"> <!--function called when
+      button clicked-->
   </form>
 
 </body>
