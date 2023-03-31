@@ -10,23 +10,33 @@
         
 
         function checkVerification() {
+            //check if age has been verifed 
         if (localStorage.over18) {
             console.log("Age verified");
-            
-        } else {
+            //check if user is logged in
+            const loggedInCheck = localStorage.getItem("loggedIn") === "true";
+    
+            if (loggedInCheck){
+                alert("You are logged in!");
+                console.log()
+            } else {
+                alert("You're not logged.");
+            }
+                    
+        } else { //redirect to splash if age hasnt been verified 
             window.open("./fakesplash.html", "_self");
             localStorage.over18 = true;
         }
         
     }
-    const loggedInCheck = localStorage.getItem("loggedIn") === "true";
+    //const loggedInCheck = localStorage.getItem("loggedIn") === "true";
     
-    if (loggedInCheck){
-        alert("You are logged in!");
-        console.log()
-    } else {
-        alert("You're not logged.");
-    }
+    //if (loggedInCheck){
+        //alert("You are logged in!");
+       // console.log()
+    //} else {
+        //alert("You're not logged.");
+    //}
     </script> 
 
 </head>
