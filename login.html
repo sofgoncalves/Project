@@ -7,23 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
     <link rel="stylesheet" href="./style.css">
-</head>
+    <!--<script>
+        const customers = [{ "cust_ID": "1", "custFirstName": "Andrea", "custLastName": "Anderson", "Adress": "22 Mayfield", "Postcode": "WV981JT", "Email": "andrea.anderson13@gmail.com", "Password": "doubleA123" },
+            { "cust_ID": "2", "custFirstName": "Tom", "custLastName": "Flowers", "Adress": "2 Westbrook", "Postcode": "L357AB", "Email": "flowerytommytom@outlook.com", "Password": "flowers123" },
+            { "cust_ID": "3", "custFirstName": "Stevey", "custLastName": "boi", "Adress": "47 Livington", "Postcode": "RG456AN", "Email": "itsyaboisteve33@hotmail.com", "Password": "yaboi123" },
+            { "cust_ID": "4", "custFirstName": "Connor", "custLastName": "Mcnealy", "Adress": "13 Ashdale", "Postcode": "TR50TP", "Email": "mcknees21@gmail.com", "Password": "knees123" },
+            { "cust_ID": "5", "custFirstName": "Amy", "custLastName": "Yu", "Adress": "5 Obama", "Postcode": "DE1 3LG", "Email": "sevenatenine789@outlook.com", "Password": "ilovemycat123" }]
 
-<!--[{"cust_ID":"1","custFirstName":"Andrea","custLastName":"Anderson","Adress":"22 Mayfield","Postcode":"WV98
-1JT","Email":"andrea.anderson13@gmail.com","Password":"doubleA123"},{"cust_ID":"2","custFirstName":"Tom","custLastName":"Flowers","Adress":"2
-Westbrook","Postcode":"L35
-7AB","Email":"flowerytommytom@outlook.com","Password":"flowers123"},{"cust_ID":"3","custFirstName":"Stevey","custLastName":"boi","Adress":"47
-Livington","Postcode":"RG45
-6AN","Email":"itsyaboisteve33@hotmail.com","Password":"yaboi123"},{"cust_ID":"4","custFirstName":"Connor","custLastName":"Mcnealy","Adress":"13
-Ashdale","Postcode":"TR5
-0TP","Email":"mcknees21@gmail.com","Password":"knees123"},{"cust_ID":"5","custFirstName":"Amy","custLastName":"Yu","Adress":"5
-Obama","Postcode":"DE1 3LG","Email":"sevenatenine789@outlook.com","Password":"ilovemycat123"}]
--->
+        const form = document.querySelector('form'); // select the form element
+        const email = document.querySelector('#email'); // select the email input field
+        const password = document.querySelector('#password'); // select the password input field
+
+        form.addEventListener('submit', event => {
+            event.preventDefault(); // prevent the default form submission behavior
+
+            const emailValue = email.value(); // gets email 
+            const passwordValue = password.value(); // gets pass
+
+                // check if the email and password are correct
+            if (emailValue === 'example@example.com' && passwordValue === 'example') {
+                window.location.href = '/index.html'; // redirect to the home page
+            }
+            else {
+                alert('Invalid email or password'); // display an error message
+            }
+            });
+
+    </script>
+</head>
 
 
 <body>
     <h1>LogIn</h1>
-    <form action="processlogin.php" method="post">
+    <form method="post"> <!action="processlogin.php">->
         <label for=" email">Email:</label>
         <input type="email" id="email" name="email" required>
         <label for="password">Password:</label>
@@ -31,5 +47,46 @@ Obama","Postcode":"DE1 3LG","Email":"sevenatenine789@outlook.com","Password":"il
         <input type="submit" value="Login">
     </form>
 </body>
-
+-->
+<body>
+    <h1>Login</h1>
+    <form>
+        <!--log in form without php-->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <input type="submit" value="Login">
+    </form>
+  
+    <script>
+      const customers = [{ "cust_ID": "1", "custFirstName": "Andrea", "custLastName": "Anderson", "Adress": "22 Mayfield", "Postcode": "WV981JT", "Email": "andrea.anderson13@gmail.com", "Password": "doubleA123" },
+            { "cust_ID": "2", "custFirstName": "Tom", "custLastName": "Flowers", "Adress": "2 Westbrook", "Postcode": "L357AB", "Email": "flowerytommytom@outlook.com", "Password": "flowers123" },
+            { "cust_ID": "3", "custFirstName": "Stevey", "custLastName": "boi", "Adress": "47 Livington", "Postcode": "RG456AN", "Email": "itsyaboisteve33@hotmail.com", "Password": "yaboi123" },
+            { "cust_ID": "4", "custFirstName": "Connor", "custLastName": "Mcnealy", "Adress": "13 Ashdale", "Postcode": "TR50TP", "Email": "mcknees21@gmail.com", "Password": "knees123" },
+            { "cust_ID": "5", "custFirstName": "Amy", "custLastName": "Yu", "Adress": "5 Obama", "Postcode": "DE1 3LG", "Email": "sevenatenine789@outlook.com", "Password": "ilovemycat123" }]
+; // JSON array of customers
+  
+      function login(event) { // function called when user submits the form
+        event.preventDefault(); 
+  
+        const email = document.getElementById("email").value.trim(); // trim to use any blank space.
+        const password = document.getElementById("password").value.trim();
+        //compairing against json array
+        const customer = customers.find(cust => cust.Email === email && cust.Password === password);
+            if (customer){ 
+                console.log(customer);
+                window.location.href ="index.html"; //redirect user to index.html page.
+                localStorage.setItem("loggedIn", "true");
+            } else {
+                console.log("Invalid email or password.");
+                localStorage.setItem("loggedIn", "false");
+                alert("Invalid email or password. Please try again or try signing up instead.");
+            }
+        }
+  
+      const form = document.querySelector("form");
+      form.addEventListener("submit", login);
+    </script>
+  </body>
 </html>

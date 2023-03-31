@@ -6,9 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
     <link  rel="stylesheet" href="./style.css">
-</head>
-<body onload="checkVerification();">
+    <script>
+        
 
+        function checkVerification() {
+        if (localStorage.over18) {
+            console.log("Age verified");
+            
+        } else {
+            window.open("./fakesplash.html", "_self");
+            localStorage.over18 = true;
+        }
+        
+    }
+    const loggedInCheck = localStorage.getItem("loggedIn") === "true";
+    
+    if (loggedInCheck){
+        alert("You are logged in!");
+        console.log()
+    } else {
+        alert("You're not logged.");
+    }
+    </script> 
+
+</head>
+
+<body onload="checkVerification();">
+    <div class="h1-center">
+        <h1>Always on Tap </h1>
+    </div>
 
     <div class="parent">
         <div class="child">
@@ -20,9 +46,9 @@
         </div>
     </div>
     
-    <div class="h1-center">
-        <h1>Always on Tap </h1>
-    </div>
+   
+
+
 
     <!--<script>
         function openHome() {
@@ -38,20 +64,6 @@
 -->
 
 
-    <script>
-        
-
-        function checkVerification() {
-        if (localStorage.over18) {
-            console.log("Age verified");
-        } else {
-            window.open("./fakesplash.html", "_self");
-            localStorage.over18 = true;
-        }
-        
-    }
-    </script> 
-    
         
     
     <div class="topnav">
@@ -62,13 +74,9 @@
         <input type="text" placeholder="Search..">
     </div>
 
-    <div class="hopimage">
+    <!--<div class="hopimage">
         <img src="https://cdn.pixabay.com/photo/2022/08/27/18/12/hop-vines-7415073_1280.jpg" alt="hop vines">
-    </div>
-
-<main>
-
-</main>
+    </div> -->
 
 </body>
 </html>
