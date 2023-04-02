@@ -7,6 +7,11 @@
     <title>Project</title>
     <link  rel="stylesheet" href="./style.css">
     <script>
+        const customers = [{ "cust_ID": "1", "custFirstName": "Andrea", "custLastName": "Anderson", "Adress": "22 Mayfield", "Postcode": "WV981JT", "Email": "andrea.anderson13@gmail.com", "Password": "doubleA123" },
+            { "cust_ID": "2", "custFirstName": "Tom", "custLastName": "Flowers", "Adress": "2 Westbrook", "Postcode": "L357AB", "Email": "flowerytommytom@outlook.com", "Password": "flowers123" },
+            { "cust_ID": "3", "custFirstName": "Stevey", "custLastName": "boi", "Adress": "47 Livington", "Postcode": "RG456AN", "Email": "itsyaboisteve33@hotmail.com", "Password": "yaboi123" },
+            { "cust_ID": "4", "custFirstName": "Connor", "custLastName": "Mcnealy", "Adress": "13 Ashdale", "Postcode": "TR50TP", "Email": "mcknees21@gmail.com", "Password": "knees123" },
+            { "cust_ID": "5", "custFirstName": "Amy", "custLastName": "Yu", "Adress": "5 Obama", "Postcode": "DE1 3LG", "Email": "sevenatenine789@outlook.com", "Password": "ilovemycat123" }]
         
 
         function checkVerification() {
@@ -15,8 +20,10 @@
             console.log("Age verified");
             //check if user is logged in
             const loggedInCheck = localStorage.getItem("loggedIn") === "true";
-    
+        
+            
             if (loggedInCheck){
+                
                 alert("You are logged in!");
                 console.log()
             } else {
@@ -42,19 +49,23 @@
 </head>
 
 <body onload="checkVerification();">
+    
+    <div class="parent">
+        <div class="child child-1">
+            <a href="./login.html">LogIn</a>
+            <a href="./signup.html">SignUp</a>
+            
+        </div>
+            
+        <div class="child child-2">
+            
+        </div>
+    </div>
     <div class="h1-center">
         <h1>Always on Tap </h1>
     </div>
 
-    <div class="parent">
-        <div class="child">
-            <a href="./login.html">LogIn</a>
-        </div>
-            
-        <div class="child">
-            <a href="./signup.html">SignUp</a>
-        </div>
-    </div>
+   
     
    
 

@@ -37,16 +37,19 @@ body{
 }
 .child a{
   position: sticky; 
-  float: right;
-  display: inline-block;
-  vertical-align:baseline;
-  top: 0;
-  right: 0;
   text-align: center;
   padding: 1rem 1rem;
   color: darkslategrey;
   font-size: 20px;
   font-family:"Monaco", monospace;
+}
+.child {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.child-1 {
+  float: right;
 }
 
   
@@ -135,7 +138,7 @@ body{
     margin-bottom: 10px;
     font-family: "Monaco", monospace;
   }
-  input[type="email"], input[type="password"] {
+  input[type="email"], input[type="password"], input[type="firstName"], input[type="lastName"]{
     width: 50%;
     padding: 10px;
     margin-bottom: 20px;
@@ -154,4 +157,13 @@ body{
   }
   input[type="submit"]:hover {
     background-color: darkslategrey;
+  }
+
+  .logInInstead {
+    font-family:"Monaco", monospace;
+  }
+
+  .signUpInstead {
+    font-family:"Monaco", monospace;
+
   }
